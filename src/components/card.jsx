@@ -1,5 +1,5 @@
 import {Bookmark} from 'lucide-react'
-const card=()=>{
+const card=(props)=>{
     return(
         <div className="card">
             <div className="top">
@@ -7,17 +7,17 @@ const card=()=>{
                 <button>Save <Bookmark size={12} /></button>
             </div>
             <div className="center">
-                <h3>Amazone <span>5 Days ago...</span></h3>
-                <h2>Python full stack developer</h2>
+                <h3>{props.companyName} <span>{props.datePosted}</span></h3>
+                <h2>{props.post}</h2>
                 <div className="tag">
-                    <p>Full time</p>
-                    <p>junior level</p>
+                    <p>{props.tag1}</p>
+                    <p>{props.tag2}</p>
                 </div>
             </div>
             <div className="buttom">
                 <div>
-                <h3>$140/hour</h3>
-                <p>Shimla</p>
+                <h3>{props.pay}</h3>
+                <p>{props.location}</p>
                 </div>
                 <button>Apply</button>
             </div>

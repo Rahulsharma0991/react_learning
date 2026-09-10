@@ -106,9 +106,14 @@ const App = () => {
 
   return(
     <div className="parent">
-      <Card/>
+      {jobOpenings.map(function(elem,idx){
+        return <div key={idx}>
+          <Card company={elem.companyName} datePosted={elem.datePosted} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay} location={elem.location} brandLogo={elem.brandLogo} />
+        </div>
+      })}
     </div>
   )
+
 
 }
 export default App
